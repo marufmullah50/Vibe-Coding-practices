@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2D Shooting Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg-dark: #0c0e14;
+      --bg-panel: rgba(18, 22, 32, 0.95);
+      --border: #2a3548;
+      --accent: #00d4aa;
+      --accent-dim: rgba(0, 212, 170, 0.4);
+      --danger: #ff4757;
+      --danger-dim: rgba(255, 71, 87, 0.5);
+      --health: #2ed573;
+      --health-bg: #1a2e22;
+      --text: #e2e8f0;
+      --text-dim: #94a3b8;
+      --glow: 0 0 20px rgba(0, 212, 170, 0.15);
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-dark);
+      font-family: 'Rajdhani', 'Segoe UI', system-ui, sans-serif;
+      color: var(--text);
+    }
+
+    .game-wrap {
+      position: relative;
+      padding: 12px;
+      background: linear-gradient(180deg, var(--bg-panel) 0%, rgba(12, 14, 20, 0.98) 100%);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      box-shadow: var(--glow), inset 0 1px 0 rgba(255,255,255,0.04);
+    }
+
+    .game-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 10px;
+      padding: 8px 12px;
+      background: rgba(0,0,0,0.35);
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
+    .game-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+    }
+
+    .hud {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .hud-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hud-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-dim);
+    }
+
+    .hp-wrap {
+      width: 140px;
+      height: 18px;
+      background: var(--health-bg);
+      border-radius: 9px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .hp-bar {
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(90deg, var(--danger), var(--health));
+      border-radius: 8px;
+      transition: width 0.2s ease;
+    }
+
+    .lives-wrap {
+      display: flex;
+      gap: 4px;
+    }
+
+    .life-icon {
+      width: 22px;
+      height: 22px;
+      background: var(--danger);
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,0.3);
+      box-shadow: 0 0 8px var(--danger-dim);
+    }
+
+    .life-icon.lost {
+      background: #333;
+      border-color: #444;
+      box-shadow: none;
+    }
+
+    #score {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1rem;
+      color: var(--accent);
+    }
+
+    .canvas-wrap {
+      position: relative;
+      display: inline-block;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
+    #gameCanvas {
+      display: block;
+      background: radial-gradient(circle at 20% 20%, #020617 0%, #020617 40%, #000 100%);
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      box-shadow: inset 0 0 40px rgba(0,0,0,0.7);
+      cursor: crosshair;
+    }
+
+    /* Game over overlay */
+    #gameOverOverlay {
+      position: absolute;
+      inset: 0;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,0.85);
+      border-radius: 8px;
+      z-index: 10;
+    }
+
+    #gameOverOverlay.visible {
+      display: flex;
+    }
+
+    .game-over-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2rem;
+      color: var(--danger);
+      text-shadow: 0 0 20px var(--danger-dim);
+      margin-bottom: 8px;
+    }
+
+    .game-over-score {
+      font-size: 1.2rem;
+      color: var(--text-dim);
+      margin-bottom: 20px;
+    }
+
+    #restartBtn {
+      padding: 12px 28px;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--bg-dark);
+      background: linear-gradient(180deg, var(--accent), #00b894);
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px var(--accent-dim);
+      transition: transform 0.1s, box-shadow 0.2s;
+    }
+
+    #restartBtn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px var(--accent-dim);
+    }
+
+    #restartBtn:active {
+      transform: translateY(0);
+    }
+
+    .hint {
+      margin-top: 10px;
+      font-size: 0.8rem;
+      color: var(--text-dim);
+    }
+  </style>
+</head>
+<body>
+  <div class="game-wrap">
+    <header class="game-header">
+      <span class="game-title">Mission Control</span>
+      <div class="hud">
+        <div class="hud-item">
+          <span class="hud-label">HP</span>
+          <div class="hp-wrap">
+            <div class="hp-bar" id="hpBar" style="width: 100%;"></div>
+          </div>
+        </div>
+        <div class="hud-item">
+          <span class="hud-label">Lives</span>
+          <div class="lives-wrap" id="livesWrap"></div>
+        </div>
+        <div class="hud-item">
+          <span class="hud-label">Score</span>
+          <span id="score">0</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas" width="900" height="520"></canvas>
+      <div id="gameOverOverlay">
+        <div class="game-over-title">Game Over</div>
+        <div class="game-over-score">Score: <span id="finalScore">0</span></div>
+        <button type="button" id="restartBtn">Restart</button>
+      </div>
+    </div>
+
+    <p class="hint">A / D move · Mouse aim · Click shoot · Enemy shoots back · 3 hits = game over</p>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
