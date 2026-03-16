@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        header p {
+            text-align: center;
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #667eea;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            background: white;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+
+        section p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+        }
+
+        .feature-card h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+        <p>A simple, clean, and modern design</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home">
+            <h2>Welcome</h2>
+            <p>
+                This is a simple HTML page with a nice semantic structure. It demonstrates the use of HTML5 semantic elements
+                such as header, navigation, main, sections, and footer. The page includes responsive design with CSS flexbox
+                and grid layouts.
+            </p>
+            <p>
+                The styling is completely inline, making it easy to customize and deploy without any external dependencies.
+                Feel free to modify the colors, content, and structure to suit your needs.
+            </p>
+        </section>
+
+        <section id="features">
+            <h2>Features</h2>
+            <p>This template includes several useful features:</p>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>📱 Responsive Design</h3>
+                    <p>Automatically adapts to different screen sizes for optimal viewing on mobile, tablet, and desktop.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🎨 Modern Styling</h3>
+                    <p>Uses a professional color scheme with gradients, shadows, and smooth transitions for an elegant look.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>♿ Semantic HTML</h3>
+                    <p>Built with semantic HTML5 elements for better accessibility and SEO optimization.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>⚡ Fast Loading</h3>
+                    <p>Inline CSS means no external stylesheets, resulting in faster page load times.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔍 Clean Code</h3>
+                    <p>Well-organized and readable code structure makes it easy to understand and modify.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>✨ Smooth Interactions</h3>
+                    <p>Includes hover effects and transitions for a more interactive user experience.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About</h2>
+            <p>
+                This is a template page created to demonstrate best practices in HTML and CSS development. It serves as a
+                great starting point for building web projects with a solid foundation.
+            </p>
+            <p>
+                The structure follows semantic HTML5 standards, making it accessible to all users and search engines. The CSS
+                uses modern techniques like CSS Grid and Flexbox for responsive layouts that work on any device.
+            </p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>
+                Feel free to reach out if you have any questions or feedback about this template. You can connect with me
+                through various channels or simply explore the code to learn how it works.
+            </p>
+            <p>
+                Happy coding! If you find this template useful, consider using it as a starting point for your own projects.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My Website. All rights reserved.</p>
+        <p>
+            Created with <span style="color: #e74c3c;">♥</span> using HTML5 and CSS3
+        </p>
+    </footer>
+</body>
+</html>
