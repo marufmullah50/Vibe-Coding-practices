@@ -1,0 +1,106 @@
+Md. Maruf Mullah
+Email: md.marufmullah50@gmail.com LinkedIn: marufmullah50 GitHub: marufmullah50 Portfolio: marufmullah50.github.io
+ACADEMIC CREDENTIALS
+B.Sc. in Mechanical Engineering , Military Institute of Science and Technology (MIST) Apr 2021 – May 2025
+CGPA: 3.23 / 4.00
+RESEARCH INTERESTS
+• Advanced and Smart Manufacturing Systems
+• Computational Mechanics and Numerical Modelling
+• Data-Driven and Machine Learning Applications in Engineering
+• Advanced Engineering Materials and Material Characterization
+BACHELOR’S THESIS
+Densification of Natural Wood to Improve Structural Properties
+Advisor: Major Md. Anisur Rahman, EME, Assistant Professor, ME Dept., MIST
+• Studied structural performance of natural, seasoned, and chemically treated–densified wood.
+• Investigated three tropical species: Swietenia macrophylla, Albizia procera, and Cordia subcordata.
+• Chemical treatment involved NaOH and Na 2SO3 followed by thermo-mechanical hot-press densification.
+• Conducted mechanical, moisture absorption, and SEM analyses following ASTM standards; densified samples showed highest
+strength.
+PROJECTS
+Traditional Machine Learning
+Surface Roughness Prediction 2025
+• Built regression models (LR, RF, GB, SVM, DT) to predict surface roughness.
+• Best model: Decision Tree ( R2 = 0.85); analyzed influence of cutting parameters.
+• GitHub
+Time-Series Forecasting
+Wind Speed & Direction Prediction 2024
+• Applied ANN, RNN, LSTM, and CatBoost on meteorological time-series data.
+• Performed feature engineering, temporal modeling, and comparative evaluation.
+• GitHub
+Deep Learning & Computer Vision
+Casting Defect Classification 2026
+• Compared CNN, MobileNetV3, ViT, and YOLO classifiers on industrial datasets.
+• Achieved 99.9% accuracy using YOLO-based classifier.
+• GitHub
+YOLO Vision Applications 2026
+• Implemented segmentation (brain MRI), detection (PPE compliance), classification, and real-time tracking.
+• Managed dataset preparation and annotation using Roboflow.
+• Optimized training pipelines and inference for real-world deployment.
+• GitHub
+LLM Applications
+RAG Research Assistant 2026
+• Developed a local Retrieval-Augmented Generation (RAG) chatbot for research assistance.
+• Integrated document ingestion, web scraping, and structured Markdown knowledge storage.
+• Enabled local inference and Gemini 2.5 Flash Lite integration for reliable responses.
+• Applied in surface roughness research for fast literature insight extraction.
+• GitHub
+PUBLICATIONS
+Conference Papers and Book Chapters
+• A. Tahsin, Md. Maruf Mullah , et al. Impact Strength and Moisture Behaviour of Natural, Densified and Seasoned Wood.
+ICMEAS 2025 (Accepted).
+• Z. Imtiaz et al., Md. Maruf Mullah . Meteorological Drought Prediction Using Forecasting Models. ICWFM 2025 (Book
+Chapter – Accepted).
+MANUSCRIPTS IN PREPARATION
+• I. Alam et al., Md. Maruf Mullah . Effect of Groove Shapes on Microstructural and Mechanical Behavior of Pipe Welds under
+Post-Weld Heat Treatment. Manuscript under revision for journal resubmission.
+TECHNICAL SKILLS
+Programming: Python, C, C++, MA TLAB, HTML
+Machine Learning: Scikit-learn, NumPy, Pandas,MLflow (Experiment Tracking), Optuna (Hyperparameter Optimization)
+Deep Learning & Computer Vision: PyTorch, TensorFlow, YOLO (Detection, Segmentation, Classification, Tracking), Roboflow
+LLM & Generative AI: RAG, LLM Inference (Local & API-based), Hugging Face Transformers
+Data Visualization: Matplotlib, Seaborn, Excel, Google Sheets
+Simulation: ANSYS, COMSOL Multiphysics
+CAD / 3D Printing: SolidWorks, FreeCAD, Anycubic Cobra
+Documentation: LATEX, Microsoft Word, Google Docs
+PROFESSIONAL EXPERIENCE
+Management Trainee Officer (Engineer) — Assessment Program
+PRAN-RFL Group, Kaliganj Agro-Processing Ltd. Jul 2025
+Kaliganj, Gazipur, Bangladesh (On-site)
+• Participated in structured assessment for manufacturing operations and engineering roles.
+• Observed production workflow, plant layout, and assisted in machine monitoring.
+• Prepared technical and operational reports demonstrating analytical and communication skills.
+Mechanical Engineering Intern
+IF AD Autos PLC Feb 2024 – Mar 2024
+Dhamrai Upazila, Dhaka, Bangladesh (On-site)
+• Assisted in vehicle assembly, mechanical fitting, and torque verification.
+• Observed quality control procedures and assembly line balancing.
+• Gained hands-on exposure to automotive manufacturing systems.
+CO-CURRICULAR ACTIVITIES & A W ARDS
+Government Scholarships
+Recipient of Government Scholarship in the Primary Education Completion (PEC) Examination 2012
+Recipient of Government Scholarship in the Junior School Certificate (JSC) Examination 2015
+Science Fair Champion — Upazila Level, Raipura 2017
+Led a school team to first place by presenting an applied science project.
+Bangladesh Boy Scouts — Scout V olunteer 2015–2016
+Served as a scout volunteer at high school, supporting discipline management, event organization, and community service activities.
+Volunteer, ICMEAS 2022
+Assisted in conference logistics, participant coordination, and technical session management.
+Volunteer, Job Fair 2022
+Supported employer coordination, registration, and event operations.
+Organizing Committee Member, Soccer Bot Competition — MIST 2024
+Contributed to planning, team coordination, and competition execution under MIST Robotics initiatives.
+Humanitarian Volunteer 2024
+Engaged in flood relief operations and winter clothing distribution programs.
+CERTIFICATIONS
+• Machine Learning Specialization (Supervised Learning) — Coursera 2024
+• Neural Networks and Deep Learning (Neural Networks and Deep Learning) — Coursera 2025
+• Mathematics for Data Science — Simplilearn 2025
+• Python Programming Bootcamp — Decoders Academy 2025
+• MA TLAB Onramp — MathWorks 2025
+• Git Training — Simplilearn 2025
+• Google Sheets — Simplilearn 2025
+• Project-Based Excel — Grameenphone Academy 2025
+REFERENCES
+Major Md. Anisur Rahman, EME Dr. Md. Sayem Hossain Bhuiyan
+Assistant Professor, ME Dept., MIST Associate Professor, ME Dept., MIST
+Email: anisur@me.mist.ac.bd Email: sayem@me.mist.ac.bd
